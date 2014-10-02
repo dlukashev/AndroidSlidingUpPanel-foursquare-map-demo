@@ -1,6 +1,8 @@
 AndroidSlidingUpPanel-foursquare-map-demo
 =========================================
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Sliding%20ListView%20with%20map-brightgreen.svg?style=flat)](https://android-arsenal.com/details/3/679)
+
 Foursquare like map demo with using modified AndroidSlidingUpPanel
 
 This is an implementation based on [AndroidSlidingUpPanel][1]. The [fork with changes][2].
