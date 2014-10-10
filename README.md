@@ -14,6 +14,11 @@ The full description - see blog post [http://android.amberfog.com/?p=915][3]
 [![Alt text for your video](http://img.youtube.com/vi/BA9L4WOb7v0/0.jpg)](http://www.youtube.com/watch?v=BA9L4WOb7v0)
 
 
+## Usage
+
+Please add your custom API key for Google Maps in the `AndroidManifest.xml` before you build the app.
+
+
   [1]: https://github.com/umano/AndroidSlidingUpPanel
   [2]: https://github.com/dlukashev/AndroidSlidingUpPanel
   [3]: http://android.amberfog.com/?p=915
