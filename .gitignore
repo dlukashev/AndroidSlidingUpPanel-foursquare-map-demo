@@ -24,3 +24,8 @@ proguard/
 
 /.idea/workspace.xml
 .DS_Store
+
+# IntelliJ / Android Studio
+.idea
+*.iml
+
