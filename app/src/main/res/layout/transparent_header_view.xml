@@ -2,12 +2,15 @@
 <FrameLayout
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@android:color/holo_green_light">
 
     <View
         android:id="@+id/space"
         android:background="@android:color/transparent"
         android:layout_width="fill_parent"
         android:layout_height="@dimen/map_height"
-        android:minHeight="@dimen/map_height"/>
+        android:minHeight="@dimen/map_height"
+        tools:background="@android:color/holo_orange_light"/>
 </FrameLayout>
