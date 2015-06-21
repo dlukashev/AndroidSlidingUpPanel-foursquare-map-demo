@@ -732,12 +732,9 @@ public class SlidingUpPanelLayout extends ViewGroup {
                     }
                 }
 
-                int top = 0;
-                if(mScrollableView!= null && mScrollableView instanceof ScrollView){
-                    top = mScrollableView.getScrollY();
-                }
                 // check if scroll down or scroll up and ListView is in top position
-                boolean isCanScrollUp = mSlideOffset == 0 && (y < mInitialMotionY || top != 0);
+                boolean isCanScrollUp = mSlideOffset == 0 && (y < mInitialMotionY || (mScrollableView != null && mScrollableView.getChildAt(0) != null &&
+                        mScrollableView.getChildAt(0).getTop() != 0));
                 if (isCanScrollUp || (ady > dragSlop && adx > ady) || !isDragViewUnder((int) x, (int) y)) {
                     mDragHelper.cancel();
                     mIsUnableToDrag = true;
