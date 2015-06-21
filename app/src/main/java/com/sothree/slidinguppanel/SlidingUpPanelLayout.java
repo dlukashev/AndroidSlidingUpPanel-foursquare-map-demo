@@ -27,9 +27,9 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
+import android.widget.ScrollView;
 
 import com.amberfog.mapslidingtest.app.R;
-import com.nineoldandroids.view.animation.AnimatorProxy;
 
 public class SlidingUpPanelLayout extends ViewGroup {
 
@@ -732,10 +732,12 @@ public class SlidingUpPanelLayout extends ViewGroup {
                     }
                 }
 
+                int top = 0;
+                if(mScrollableView!= null && mScrollableView instanceof ScrollView){
+                    top = mScrollableView.getScrollY();
+                }
                 // check if scroll down or scroll up and ListView is in top position
-                boolean isCanScrollUp = mSlideOffset == 0 && (y < mInitialMotionY ||
-                        (mScrollableView != null && mScrollableView.getChildAt(0) != null &&
-                                mScrollableView.getChildAt(0).getTop() != 0));
+                boolean isCanScrollUp = mSlideOffset == 0 && (y < mInitialMotionY || top != 0);
                 if (isCanScrollUp || (ady > dragSlop && adx > ady) || !isDragViewUnder((int) x, (int) y)) {
                     mDragHelper.cancel();
                     mIsUnableToDrag = true;
@@ -911,7 +913,7 @@ public class SlidingUpPanelLayout extends ViewGroup {
         requestLayout();
     }
 
-    private void onPanelDragged(int newTop) {
+    public void onPanelDragged(int newTop) {
         final int topBound = getSlidingTop();
         mSlideOffset = mIsSlidingUp
                 ? (float) (newTop - topBound) / mSlideRange
@@ -923,7 +925,7 @@ public class SlidingUpPanelLayout extends ViewGroup {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
                 mMainView.setTranslationY(mainViewOffset);
             } else {
-                AnimatorProxy.wrap(mMainView).setTranslationY(mainViewOffset);
+                //AnimatorProxy.wrap(mMainView).setTranslationY(mainViewOffset);
             }
         }
     }

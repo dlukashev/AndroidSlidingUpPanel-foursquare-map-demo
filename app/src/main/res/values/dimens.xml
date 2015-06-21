@@ -3,7 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <dimen name="map_height">100dp</dimen>
-    <dimen name="paralax_offset">200dp</dimen>
+    <dimen name="map_height">120dp</dimen>
+    <dimen name="paralax_offset">125dp</dimen>
     <dimen name="divider_height">1dp</dimen>
 </resources>
