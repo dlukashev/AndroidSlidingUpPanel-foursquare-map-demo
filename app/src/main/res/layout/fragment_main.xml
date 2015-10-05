@@ -36,7 +36,7 @@
                 android:layout_height="@dimen/map_height"
                 android:layout_alignParentTop="true"/>
 
-            <com.amberfog.mapslidingtest.app.LockableListView
+            <com.amberfog.mapslidingtest.app.LockableRecyclerView
                 android:id="@android:id/list"
                 android:cacheColorHint="@android:color/white"
                 android:drawSelectorOnTop="true"
