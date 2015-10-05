@@ -65,6 +65,7 @@ public class MainFragment extends Fragment implements GoogleApiClient.Connection
     //private View mTransparentHeaderView;
     //private View mSpaceView;
     private View mTransparentView;
+    private View mWhiteSpaceView;
 
     private HeaderAdapter mHeaderAdapter;
 
@@ -108,6 +109,7 @@ public class MainFragment extends Fragment implements GoogleApiClient.Connection
 
         // transparent view at the top of ListView
         mTransparentView = rootView.findViewById(R.id.transparentView);
+        mWhiteSpaceView = rootView.findViewById(R.id.whiteSpaceView);
 
         // init header view for ListView
         // mTransparentHeaderView = inflater.inflate(R.layout.transparent_header_view, mListView, false);
@@ -144,6 +146,9 @@ public class MainFragment extends Fragment implements GoogleApiClient.Connection
         for (int i = 0; i < 100; i++) {
             testData.add("Item " + i);
         }
+        // show white bg if there are not too many items
+        // mWhiteSpaceView.setVisibility(View.VISIBLE);
+
         // ListView approach
         /*mListView.addHeaderView(mTransparentHeaderView);
         mListView.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.simple_list_item, testData));

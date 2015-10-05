@@ -36,6 +36,14 @@
                 android:layout_height="@dimen/map_height"
                 android:layout_alignParentTop="true"/>
 
+            <View
+                android:id="@+id/whiteSpaceView"
+                android:visibility="gone"
+                android:background="@android:color/white"
+                android:layout_marginTop="@dimen/map_height"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
             <com.amberfog.mapslidingtest.app.LockableRecyclerView
                 android:id="@android:id/list"
                 android:cacheColorHint="@android:color/white"
